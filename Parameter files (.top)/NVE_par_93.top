@@ -1,0 +1,261 @@
+[Hydrological system description]  : "C:\PINE\ALL_NVE\Feigumfoss_NVE\Feigu\Feigu.top"  Wed Mar 06 16:09:11 2019
+
+
+[respmodules]
+module: PINE_IDTilsig
+  node: 1   IDTilsig_node
+      Method: IDTILSIG:
+              ELEV0           [       masl ]      452.000 : Lower elevation of zone 1
+              ELEV1           [       masl ]      976.000 : Lower elevation of zone 2
+              ELEV2           [       masl ]     1111.000 : Lower elevation of zone 3
+              ELEV3           [       masl ]     1186.000 : Lower elevation of zone 4
+              ELEV4           [       masl ]     1243.000 : Lower elevation of zone 5
+              ELEV5           [       masl ]     1293.000 : Lower elevation of zone 6
+              ELEV6           [       masl ]     1334.000 : Lower elevation of zone 7
+              ELEV7           [       masl ]     1372.000 : Lower elevation of zone 8
+              ELEV8           [       masl ]     1408.000 : Lower elevation of zone 9
+              ELEV9           [       masl ]     1452.000 : Lower elevation of zone 10
+              ELEV10          [       masl ]     1594.000 : Upper elevation of zone 10
+              NEDNIV          [          - ]            0 : Number of forested elevation zones
+              FLDAREA         [        km2 ]       48.100 : Catchment area
+              AREA1           [        km2 ]        4.810 : Area of zone 1
+              AREA2           [        km2 ]        4.810 : Area of zone 2
+              AREA3           [        km2 ]        4.810 : Area of zone 3
+              AREA4           [        km2 ]        4.810 : Area of zone 4
+              AREA5           [        km2 ]        4.810 : Area of zone 5
+              AREA6           [        km2 ]        4.810 : Area of zone 6
+              AREA7           [        km2 ]        4.810 : Area of zone 7
+              AREA8           [        km2 ]        4.810 : Area of zone 8
+              AREA9           [        km2 ]        4.810 : Area of zone 9
+              AREA10          [        km2 ]        4.810 : Area of zone 10
+              ELEVTMP         [       masl ]     1145.000 : Ref.height temperature
+              ELEVPRC         [       masl ]     1145.000 : Ref.height precipitation
+              GLAC1           [          - ]        0.000 : Glacier portion of zone 1
+              GLAC2           [          - ]        0.000 : Glacier portion of zone 2
+              GLAC3           [          - ]        0.000 : Glacier portion of zone 3
+              GLAC4           [          - ]        0.000 : Glacier portion of zone 4
+              GLAC5           [          - ]        0.000 : Glacier portion of zone 5
+              GLAC6           [          - ]        0.000 : Glacier portion of zone 6
+              GLAC7           [          - ]        0.000 : Glacier portion of zone 7
+              GLAC8           [          - ]        0.000 : Glacier portion of zone 8
+              GLAC9           [          - ]        0.000 : Glacier portion of zone 9
+              GLAC10          [          - ]        0.000 : Glacier portion of zone 10
+              S100            [          - ]        2.000 : Upper limit in snow distribution in upper forest free part
+              S75             [          - ]        1.500 : Upper quartile in snow distribution in upper forest free part
+              S50             [          - ]        1.000 : Median in snow distribution function in upper forest free part
+              S25             [          - ]        0.500 : Lower quartile in snow distribution in upper forest free part
+              S00             [          - ]        0.000 : Lower limit in snow distribution in upper forest free part
+              SL100           [          - ]        1.500 : Upper limit in snow distribution in lower forested part
+              SL75            [          - ]        1.250 : Upper quartile in snow distribution in lower forested part
+              SL50            [          - ]        1.000 : Median in snow distribution function in lower forested part
+              SL25            [          - ]        0.750 : Lower quartile in snow distribution in lower forested part
+              SL00            [          - ]        0.500 : Lower limit in snow distribution in lower forested part
+              MAXUNIFSNW      [         mm ]       20.000 : Threshold for redistribution of snow
+              RCORR           [          - ]        1.415 : Point correction factor for rain
+              SCORR           [          - ]        1.229 : Extra point correction factor for snow
+              TX              [         °C ]        0.322 : Threshold temperature rain - snow
+              TCGRAD          [    °C/100m ]       -1.000 : Temperature lapse rate on clear days
+              TPGRAD          [    °C/100m ]       -0.500 : Temperature lapse rate on overcast days
+              PGRAD           [     -/100m ]        0.050 : Precipitation height gradient
+              CX              [     mm/d°C ]        3.464 : Degree-day factor for snow melt in upper forest free part
+              CXN             [     mm/d°C ]        2.309 : Degree-day factor for snow melt in lower forested part
+              TS              [         °C ]       -2.421 : Treshold melt/freeze in upper forest free part
+              TSN             [         °C ]       -0.609 : Treshold melt/freeze in lower forested part
+              CFR             [     mm/d°C ]        0.010 : Refreeze coefficient
+              LW              [          - ]        0.070 : Max relative portion liquid water in snow
+              NDAG            [          - ]      270.000 : Day no. for snow to ice conversion
+              CBRE            [          - ]        2.000 : Adjustment of CX for glacier melting
+              EPJAN           [         mm ]        0.100 : Daily potential evapotranspiration in January
+              EPFEB           [         mm ]        0.200 : Daily potential evapotranspiration in February
+              EPMAR           [         mm ]        0.700 : Daily potential evapotranspiration in March
+              EPAPR           [         mm ]        1.000 : Daily potential evapotranspiration in April
+              EPMAY           [         mm ]        2.300 : Daily potential evapotranspiration in May
+              EPJUN           [         mm ]        3.500 : Daily potential evapotranspiration in June
+              EPJUL           [         mm ]        3.500 : Daily potential evapotranspiration in July
+              EPAUG           [         mm ]        2.300 : Daily potential evapotranspiration in August
+              EPSEP           [         mm ]        1.000 : Daily potential evapotranspiration in September
+              EPOKT           [         mm ]        0.700 : Daily potential evapotranspiration in October
+              EPNOV           [         mm ]        0.200 : Daily potential evapotranspiration in November
+              EPDES           [         mm ]        0.100 : Daily potential evapotranspiration in December
+              FC              [         mm ]       62.375 : Field capacity
+              FCDEL           [          - ]        1.000 : Minimum soil moisture filling for potential evapotranspiration
+              BETA            [          - ]        0.100 : Non-linearity in soil water retention
+              INFMAX          [       mm/h ]       50.000 : Infiltration capacity
+              KUZ2            [      1/day ]        3.347 : Outlet coefficient for quickest surface runoff
+              KUZ1            [      1/day ]        0.675 : Outlet coefficient for quick surface runoff
+              KUZ             [      1/day ]        0.194 : Outlet coefficient for slow surface runoff
+              KLZ             [      1/day ]        0.045 : Outlet coefficient for groundwater runoff
+              PERC            [     mm/day ]        3.347 : Constant percolation rate to groundwater storage
+              UZ2             [         mm ]       65.567 : Threshold between quickest and quick surface runoff
+              UZ1             [         mm ]       11.350 : Threshold between quick and slow surface runoff
+              SJODEL          [          % ]        5.680 : Lake portion
+              MAGDEL          [          % ]        0.000 : Reservoir portion
+              OPPTR           [     mm/day ]        1.000 : Draw-up from ground water to root zone
+              EQLAKEAREA      [        km2 ]        0.000 : Equivalent lake area
+              RATINGCNST      [          - ]        0.000 : Rating curve constant
+              RATINGZERO      [          m ]        0.000 : Rating curve zero (m)  (stage for zero flow)
+              RATINGEXP       [          - ]        1.500 : Rating curve exponent
+              LAKECATCHFACT   [          - ]        0.000 : Portion of catchment that drains through lake
+              PARDSP          [          - ]            0 : Display parameteres after model runs [1=yes, 0=no]
+              SNWDRY1         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY2         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY3         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY4         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY5         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY6         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY7         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY8         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY9         [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWDRY10        [         mm ]        0.000 : Initial dry snow pack in zone 1
+              SNWWET1         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET2         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET3         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET4         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET5         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET6         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET7         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET8         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET9         [         mm ]        0.000 : Initial snow water in zone 1
+              SNWWET10        [         mm ]        0.000 : Initial snow water in zone 1
+              SNWCOV1         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV2         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV3         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV4         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV5         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV6         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV7         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV8         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV9         [         mm ]        0.000 : Initial snow cover in zone 1
+              SNWCOV10        [         mm ]        0.000 : Initial snow cover in zone 1
+              ICEBAL1         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL2         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL3         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL4         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL5         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL6         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL7         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL8         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL9         [         mm ]        0.000 : Initial glacier balance in zone 1
+              ICEBAL10        [         mm ]        0.000 : Initial glacier balance in zone 1
+              SOLMST          [         mm ]       46.781 : Initial soil moisture content
+              SRFWATSTOR      [         mm ]        0.000 : Initial surface water content
+              GRNDWATSTOR     [         mm ]        0.000 : Initial ground water content
+              LAKELEV         [          m ]        0.000 : Initial lake water level
+      Method: VOID
+      Transf: 0	        VOID      0
+      Inlets: 0         VOID      0
+      RInlts: 0         VOID      0
+      XtvRef: VOID      0         VOID
+      Direct: SIMRUNOFF
+module: VOID
+[inputvars]
+    node: 1  INPRECIP = PRECIP
+    node: 1  INMAXTMP = TMAX
+    node: 1  INMINTMP = TMIN
+    node: 1  INOBSVAR = OBSVAR
+    node: 0  VOID = VOID
+[outputvars]
+        node: 1     OBSRUNOFF
+        node: 1     SIMRUNOFF
+        node: 1     INOBSVAR
+        node: 1     ACCDIFFERENS
+        node: 1     INPRECIP
+        node: 1     INMAXTMP
+        node: 1     INMINTMP
+        node: 1     FLDPRECIP
+        node: 1     ACCFLDPRECIP
+        node: 1     FLDTEMPER
+        node: 1     FLDSNWPCK
+        node: 1     FLDSNWWET
+        node: 1     FLDSNWCOV
+        node: 1     FLDSNWMLT
+        node: 1     FLDSNWOUT
+        node: 1     FLDICEBAL
+        node: 1     FLDICEOUT
+        node: 1     EPOT
+        node: 1     AET
+        node: 1     FLDEVAPOT
+        node: 1     ACCFLDEVAPOT
+        node: 1     SOLMST
+        node: 1     SRFRUN
+        node: 1     SOLOUT
+        node: 1     AVGRUNOFF
+        node: 1     MOMSIMUPR
+        node: 1     MOMSIMLWR
+        node: 1     MOMSIMRUN
+        node: 1     ACCOBSRUNOFF
+        node: 1     ACCSIMRUNOFF
+        node: 1     SRFWATSTOR
+        node: 1     GRNDWATSTOR
+        node: 1     WATERSTORED
+        node: 1     ACTUALPERCOL
+        node: 1     ACTUALDRAWUP
+        node: 1     LAKELEV
+        node: 1     LAKECONT
+        node: 1     SNWDRY1
+        node: 1     SNWDRY2
+        node: 1     SNWDRY3
+        node: 1     SNWDRY4
+        node: 1     SNWDRY5
+        node: 1     SNWDRY6
+        node: 1     SNWDRY7
+        node: 1     SNWDRY8
+        node: 1     SNWDRY9
+        node: 1     SNWDRY10
+        node: 1     SNWWET1
+        node: 1     SNWWET2
+        node: 1     SNWWET3
+        node: 1     SNWWET4
+        node: 1     SNWWET5
+        node: 1     SNWWET6
+        node: 1     SNWWET7
+        node: 1     SNWWET8
+        node: 1     SNWWET9
+        node: 1     SNWWET10
+        node: 1     SNWPCK1
+        node: 1     SNWPCK2
+        node: 1     SNWPCK3
+        node: 1     SNWPCK4
+        node: 1     SNWPCK5
+        node: 1     SNWPCK6
+        node: 1     SNWPCK7
+        node: 1     SNWPCK8
+        node: 1     SNWPCK9
+        node: 1     SNWPCK10
+        node: 1     SNWCOV1
+        node: 1     SNWCOV2
+        node: 1     SNWCOV3
+        node: 1     SNWCOV4
+        node: 1     SNWCOV5
+        node: 1     SNWCOV6
+        node: 1     SNWCOV7
+        node: 1     SNWCOV8
+        node: 1     SNWCOV9
+        node: 1     SNWCOV10
+        node: 1     ICEBAL1
+        node: 1     ICEBAL2
+        node: 1     ICEBAL3
+        node: 1     ICEBAL4
+        node: 1     ICEBAL5
+        node: 1     ICEBAL6
+        node: 1     ICEBAL7
+        node: 1     ICEBAL8
+        node: 1     ICEBAL9
+        node: 1     ICEBAL10
+        node: 1     INOBSVAR
+        node: 1     SIMDSCHRG
+    node: 0     VOID
+[erroranals]
+          R2        1  SIMRUNOFF              1  OBSRUNOFF
+          ACCDIFF   1  SIMRUNOFF              1  OBSRUNOFF
+          MAE       1  SIMRUNOFF              1  OBSRUNOFF
+          MAAE      1  SIMRUNOFF              1  OBSRUNOFF
+          RWBE      1  SIMRUNOFF              1  OBSRUNOFF
+          RVBE      1  SIMRUNOFF              1  OBSRUNOFF
+          AVERAGE   1  FLDPRECIP
+          AVERAGE   1  FLDEVAPOT
+          AVERAGE   1  SIMRUNOFF
+          AVERAGE   1  OBSRUNOFF
+          CHANGE    1  WATERSTORED
+      VOID
+[endsystem]
