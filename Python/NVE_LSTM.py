@@ -112,7 +112,7 @@ def load_training_data(catchment: int) -> Tuple[pd.DataFrame, int]:
             df = pd.read_csv(file_path)
             df["timestamp"] = pd.to_datetime(df["timestamp"])
             # Delay by one day
-            df["Residual_in"] = np.roll(df["Residual"], 1)
+            df["Q_obs_in"] = np.roll(df["Q_obs"], 1)
             
     # Return None if catchment does not exist
     if file_exist == False:
@@ -252,7 +252,7 @@ class NVE_TXT(Dataset):
                       df['grC8'].values,
                       df['grC9'].values,
                       df['grC10'].values,
-                      df['Residual_in'].values,
+                      df['Q_obs_in'].values,
                       df['EPOT'].values]).T
         y = np.array([df['Residual'].values]).T
         
@@ -299,7 +299,7 @@ class NVE_TXT(Dataset):
                               self.means['grC8'],
                               self.means['grC9'],
                               self.means['grC10'],
-                              self.means['Residual_in'],
+                              self.means['Q_obs_in'],
                               self.means['EPOT']])
             stds = np.array([self.stds['mm1'],
                              self.stds['mm2'],
@@ -321,7 +321,7 @@ class NVE_TXT(Dataset):
                              self.stds['grC8'],
                              self.stds['grC9'],
                              self.stds['grC10'],
-                             self.stds['Residual_in'],
+                             self.stds['Q_obs_in'],
                              self.stds['EPOT']])
             feature = (feature - means) / stds
         elif variable == 'output':
@@ -361,7 +361,7 @@ class NVE_TXT(Dataset):
                               self.means['grC8'],
                               self.means['grC9'],
                               self.means['grC10'],
-                              self.means['Residual_in'],
+                              self.means['Q_obs_in'],
                               self.means['EPOT']])
             stds = np.array([self.stds['mm1'],
                              self.stds['mm2'],
@@ -383,7 +383,7 @@ class NVE_TXT(Dataset):
                              self.stds['grC8'],
                              self.stds['grC9'],
                              self.stds['grC10'],
-                             self.stds['Residual_in'],
+                             self.stds['Q_obs_in'],
                              self.stds['EPOT']])
             feature = feature * stds + means
         elif variable == 'output':
