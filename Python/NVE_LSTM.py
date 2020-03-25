@@ -669,7 +669,9 @@ for file_nr in file_nrs:
     _ = ax.set_ylabel("Residuals (m3/s)")
 
     fig.savefig(f"LSTM Plots/LSTM_Residuals_&_BB_test_NSE_{file_nr}.png")
-
+    
+    d = {"predicted_residual": list(preds), "observed_residual": list(obs)}
+    output_df = pd.DataFrame.from_dict(d)
 
     # In[ ]:
 
@@ -710,7 +712,9 @@ for file_nr in file_nrs:
     _ = ax.set_ylabel("Runoff (m3/s)")
 
     fig.savefig(f"LSTM Plots/LSTM_Simulated_test_NSE_{file_nr}.png")
-
+    
+    output_df["hbv_simulated"] = list(Q_sim_sum)
+    output_df["hbv_observed"] = list(Q_obs)
 
     # ### Total NSE plot
 
@@ -748,9 +752,12 @@ for file_nr in file_nrs:
 
     fig.savefig(f"LSTM Plots/LSTM_Simulated_&_BB_test_NSE_{file_nr}.png")
 
-
+    output_df["hbv_BB_simulated"] = list(Q_sim_sum)
+    output_df["hbv_BB_observed"] = list(Q_obs)
     # In[ ]:
-
+    
+    # Save to csv file
+    output_df.to_csv(f"lstm_no_lookback_{file_nr}.csv")
 
 
 
